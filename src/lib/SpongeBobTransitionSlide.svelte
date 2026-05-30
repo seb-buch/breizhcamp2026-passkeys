@@ -1,0 +1,43 @@
+<script lang="ts">
+	import backgroundImage from '$lib/assets/images/spongebob-transition-background.jpeg';
+	import { Slide, SpeakerNotes } from '@slyd/core';
+</script>
+
+<Slide {backgroundImage} backgroundSize="cover">
+	<div class="section-title">
+		<h3>Bienvenue à<br />Bikini Bottom...</h3>
+	</div>
+	<SpeakerNotes>
+		<p>Et pour commencer, on va partir à Bikini Bottom!</p>
+	</SpeakerNotes>
+</Slide>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+  .section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1080px;
+  }
+
+  .section-title h3 {
+    font-family: 'Titan One', cursive;
+    font-size: 2.5em;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #1b1464,
+    -2px -2px 0 #1b1464,
+    2px -2px 0 #1b1464,
+    -2px 2px 0 #1b1464,
+    0 3px 0 #1b1464,
+    3px 0 0 #1b1464,
+    0 -2px 0 #1b1464,
+    -2px 0 0 #1b1464;
+    letter-spacing: 0.1em;
+    line-height: 2;
+    border: none;
+  }
+</style>
