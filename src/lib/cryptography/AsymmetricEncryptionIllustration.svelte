@@ -4,7 +4,7 @@
 	import CryptoKey from './common/CryptoKey.svelte';
 	import RightArrow from './common/RightArrow.svelte';
 	import Lock from './common/Lock.svelte';
-	import { Slide, SpeakerNotes, VerticalSpacer } from '@slyd/core';
+	import { Slide, SpeakerNotes, VerticalSpacer } from '@seb-buch/slyd';
 
 	const documentSize = 256;
 	const plainMessage = 'Salut, Je suis à BreizhCamp 2026 !';
@@ -12,11 +12,11 @@
 </script>
 
 <Slide>
-	<h3>Cryptographie asymétrique &ndash; Chiffrement</h3>
+	<h3>Chiffrement asymmétrique</h3>
 
 	<VerticalSpacer height="1em" />
 
-	<div class="container">
+	<div class="victory-container">
 		<div class="crypto-user">
 			<User size="150" name="Bob" />
 			<CryptoKey type="public" size="128" />
@@ -38,7 +38,7 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="victory-container">
 		<div class="crypto-user">
 			<User size="150" shirtColor="#d2745b" />
 			<CryptoKey type="pair" size="128" />
@@ -64,36 +64,36 @@
 </Slide>
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 2em 0;
+	.victory-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		padding: 2em 0;
 
-    .crypto-user,
-    .crypto-action {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+		.crypto-user,
+		.crypto-action {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
 
-    .crypto-action {
-      .lock {
-        padding-right: 30px;
-      }
+		.crypto-action {
+			.lock {
+				padding-right: 30px;
+			}
 
-      .arrow {
-        margin: -20px 0;
-      }
+			.arrow {
+				margin: -20px 0;
+			}
 
-      .description {
-        margin: 0;
-        font-size: 0.7em;
-        font-weight: bold;
-      }
-    }
-  }
+			.description {
+				margin: 0;
+				font-size: 0.7em;
+				font-weight: bold;
+			}
+		}
+	}
 </style>

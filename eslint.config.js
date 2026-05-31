@@ -37,6 +37,13 @@ export default defineConfig(
 		}
 	},
 	{
+		files: ['src/lib/webauthn/code/**'],
+		rules: {
+			'no-unused-vars': 'off',
+			'@typescript-eslint/no-unused-vars': 'off'
+		}
+	},
+	{
 		// Override or add rule settings here, such as:
 		// 'svelte/button-has-type': 'error'
 		rules: {}

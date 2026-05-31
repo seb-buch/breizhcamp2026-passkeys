@@ -1,46 +1,49 @@
 .fragment {
-  transition: top 1s ease, left 1s ease, right 1s ease, bottom 1s ease !important;
-
+	transition:
+		top 1s ease,
+		left 1s ease,
+		right 1s ease,
+		bottom 1s ease !important;
 }
 
 .bob-document.fragment {
-  position: relative;
-  top: 420px;
+	position: relative;
+	top: 420px;
 
-  &.revealed {
-    top: 0;
-  }
+	&.revealed {
+		top: 0;
+	}
 }
 
 .alice-key.fragment {
-  position: relative;
-  top: -400px;
+	position: relative;
+	top: -400px;
 
-  &.revealed {
-    top: 0;
-  }
+	&.revealed {
+		top: 0;
+	}
 }
 
 .bob-document-signed.fragment {
-  position: relative;
-  top: -420px;
-  left: 510px;
+	position: relative;
+	top: -420px;
+	left: 510px;
 
-  &.revealed {
-    top: 0;
-    visibility: visible;
-    left: 0;
-  }
+	&.revealed {
+		top: 0;
+		visibility: visible;
+		left: 0;
+	}
 }
 
 .alice-private-key.fragment,
 .bob-verification-key.fragment {
-  position: relative;
-  left: -470px;
-  top: 170px;
+	position: relative;
+	left: -470px;
+	top: 170px;
 
-  &.revealed {
-    top: 0;
-    left: 0;
-  }
+	&.revealed {
+		top: 0;
+		left: 0;
+	}
 }

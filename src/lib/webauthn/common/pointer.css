@@ -1,0 +1,32 @@
+.pointer.fragment {
+	position: absolute;
+	transform: translate(-50%, -100%);
+
+	&.row-1 {
+		top: 190px;
+	}
+
+	&.row-2 {
+		top: 270px;
+	}
+
+	&.row-7 {
+		top: 670px;
+	}
+
+	&.col2-3 {
+		left: 940px;
+
+		&.revealed {
+			left: 1567px;
+		}
+	}
+
+	&.col3-2 {
+		left: 1567px;
+
+		&.revealed {
+			left: 940px;
+		}
+	}
+}

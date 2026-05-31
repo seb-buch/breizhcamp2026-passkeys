@@ -1,20 +1,20 @@
 <script lang="ts">
-  import RightArrow from './common/RightArrow.svelte';
-  import CryptoKey from './common/CryptoKey.svelte';
-  import User from './common/User.svelte';
-  import PlainDocument from './common/PlainDocument.svelte';
-  import './common/signing.css';
-  import { Slide, SpeakerNotes, VerticalSpacer } from '@slyd/core';
+	import RightArrow from './common/RightArrow.svelte';
+	import CryptoKey from './common/CryptoKey.svelte';
+	import User from './common/User.svelte';
+	import PlainDocument from './common/PlainDocument.svelte';
+	import './common/signing.css';
+	import { Slide, SpeakerNotes, VerticalSpacer } from '@seb-buch/slyd';
 
-  const documentSize = 256;
+	const documentSize = 256;
 </script>
 
 <Slide>
-	<h3>Cryptographie asymétrique &ndash; Signature &amp; Authentification</h3>
+	<h3>Signature &amp; Authentification</h3>
 
 	<VerticalSpacer height="1em" />
 
-	<div class="container">
+	<div class="victory-container">
 		<div class="crypto-user">
 			<User size="150" shirtColor="#d2745b" />
 			<CryptoKey type="pair" size="128" />
@@ -36,7 +36,7 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="victory-container">
 		<div class="crypto-user">
 			<User size="150" name="Bob" />
 			<div class="fragment alice-key" data-fragment-index="4">
@@ -59,8 +59,8 @@
 			<PlainDocument size={documentSize} state="verified" />
 		</div>
 	</div>
-	<p class="fragment" data-fragment-index="7">
-		Bob a authentifié Alice sans partager de secret&nbsp;!
+	<p class="fragment conclusion" data-fragment-index="7">
+		Bob a authentifié Alice <em>sans</em> partager de secret&nbsp;!
 	</p>
 
 	<SpeakerNotes>
@@ -68,8 +68,7 @@
 		mais il veut être sûr que c'est bien elle.<br />
 		Pour cela, Bob va envoyer un document à Alice.<br />
 		Elle, va utiliser sa clé privée pour signer le document.<br />
-		Puis, elle va envoyer le document signé à Bob, ainsi que sa clé publique (que Bob peut de toute
-		façon
+		Puis, elle va envoyer le document signé à Bob, ainsi que sa clé publique (que Bob peut de toute façon
 		récupérer par ailleurs puisqu'elle est justement publique!).<br />
 		Bob va utiliser la clé publique d'Alice pour vérifier la signature du document.<br />
 		Si la signature est valide, Bob peut être sûr que le document provient bien d'Alice.<br />
@@ -78,33 +77,39 @@
 </Slide>
 
 <style>
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 2em 0;
+	.victory-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		padding: 2em 0;
 
-    .crypto-user,
-    .crypto-action {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+		.crypto-user,
+		.crypto-action {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
 
-    .crypto-action {
-      .arrow {
-        margin: -20px 0;
-      }
+		.crypto-action {
+			.arrow {
+				margin: -20px 0;
+			}
 
-      .description {
-        margin: 0;
-        font-size: 0.7em;
-        font-weight: bold;
-        color: var(--r-main-color);
-      }
-    }
-  }
+			.description {
+				margin: 0;
+				font-size: 0.7em;
+				font-weight: bold;
+				color: var(--r-main-color);
+			}
+		}
+	}
+
+	p.conclusion {
+		text-align: center;
+		font-size: 1.2em;
+		font-weight: bold;
+	}
 </style>

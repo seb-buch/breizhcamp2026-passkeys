@@ -35,24 +35,24 @@
 </svg>
 
 <style>
-  svg {
-    path {
-      fill-opacity: 1;
-      stroke: #17395c;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+	svg {
+		path {
+			fill-opacity: 1;
+			stroke: #17395c;
+			stroke-width: 1.5;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+		}
 
-    div {
-      color: #284968;
-      line-height: 1.1;
-      word-break: break-word;
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      text-align: left;
-      font-size: 5.75px;
-    }
-  }
+		div {
+			color: #284968;
+			line-height: 1.1;
+			word-break: break-word;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			text-align: left;
+			font-size: 5.75px;
+		}
+	}
 </style>

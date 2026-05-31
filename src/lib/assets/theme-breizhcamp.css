@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+	--slyd-headings-font: 'Share Tech Mono', monospace;
+	--slyd-headings-font-weight: bold;
+	--slyd-base-font-size: 36px;
+
+	--slyd-main-color: #244b24;
+	--slyd-headings-color: #1b5e20;
+	--slyd-presentation-bg-color: #e8f5e9;
+	--slyd-accent-color: #2e7d32;
+}
+
+.slyd {
+	.slyd-code {
+		font-size: 22px;
+	}
+
+	table {
+		border-collapse: collapse;
+
+		td,
+		th {
+			padding: 20px 2em;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f8f8f8;
+		}
+	}
+}
