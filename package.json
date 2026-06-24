@@ -14,7 +14,7 @@
 		"format": "prettier --write ."
 	},
 	"dependencies": {
-		"@seb-buch/slyd": "0.1.1"
+		"@seb-buch/slyd": "0.2.0"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.4",
