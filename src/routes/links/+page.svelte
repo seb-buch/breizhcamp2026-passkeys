@@ -3,19 +3,16 @@
 
 	import '$lib/assets/theme-breizhcamp.css';
 
-	// TODO: fill in once repos are public and slides are deployed
-	const TODO = 'https://github.com/seb-buch';
-
 	const links = [
 		{
 			label: 'Slides',
 			icon: 'fa-display',
-			url: TODO
+			url: 'https://seb-buch.github.io/breizhcamp2026-passkeys'
 		},
 		{
-			label: 'Repo présentation',
-			icon: 'fa-brands fa-github',
-			url: TODO
+			label: 'Feedback',
+			icon: 'fa-comments',
+			url: 'https://openfeedback.io/SRRLTK2p7mBWUfvuRudl/2026-06-26/1171002'
 		},
 		{
 			label: 'Repo démo (KrabsVault)',
@@ -23,9 +20,9 @@
 			url: "https://github.com/seb-buch/passkey-demo"
 		},
 		{
-			label: 'Feedback',
-			icon: 'fa-comments',
-			url: 'https://openfeedback.io/SRRLTK2p7mBWUfvuRudl/2026-06-26/1171002'
+			label: 'Repo présentation',
+			icon: 'fa-brands fa-github',
+			url: 'https://github.com/seb-buch/breizhcamp2026-passkeys'
 		}
 	];
 </script>
@@ -36,9 +33,10 @@
 </svelte:head>
 
 <div class="page" style="background-image: url({background})">
-	<div class="panel">
+	<div class="header">
 		<h1>Passkeys</h1>
 		<p class="subtitle">BreizhCamp 2026 — Sébastien Buchoux</p>
+	</div>
 
 		<div class="grid">
 			{#each links as link (link.label)}
@@ -48,7 +46,6 @@
 				</a>
 			{/each}
 		</div>
-	</div>
 </div>
 
 <style>
@@ -56,7 +53,7 @@
 		margin: 0;
 		padding: 0;
 		font-family: sans-serif;
-		font-size: 30px;
+		font-size: 1.1rem;
 	}
 
 	.page {
@@ -64,67 +61,64 @@
 		background-size: cover;
 		background-position: center;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		gap: 1rem;
+
 	}
 
-	.panel {
-		background: #f1f5f8cc;
-		backdrop-filter: blur(12px);
+	.header {
+    background: #f1f5f8cc;
+    backdrop-filter: blur(12px);
 		border-radius: 16px;
-		padding: 2.5rem 3rem;
+		padding: 1rem;
 		text-align: center;
-		max-width: 900px;
-		width: 90vw;
-	}
-
+		max-width: 90vw;
 	h1 {
 		margin: 0 0 0.25em;
-		font-size: 1.5em;
+    font-size: 5rem;
 		color: #1b5e20;
 	}
 
 	.subtitle {
-		margin: 0 0 2em;
 		color: #244b24;
-		font-size: 1em;
+    font-size: 1.5rem;
 		opacity: 0.8;
 	}
+	}
+
 
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 1.5rem;
-	}
+		gap: 5vw;
 
 	.card {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 0.75rem;
+		gap:3vh 3vw;
 		background: white;
 		border-radius: 12px;
-		padding: 1.25rem;
+		padding: 3vh 3vw;
 		text-decoration: none;
 		color: #244b24;
 		border: 4px solid transparent;
 		transition: border-color 0.2s ease;
+		text-align: center;
 
 		.icon {
-			font-size: 8rem;
+			font-size: calc(max(10vw, 5rem));
 		}
-	}
-
-	.card:hover {
+	&:hover {
 		border-color: #2e7d32;
 	}
 
-	.card-label {
-		margin: 0;
-		font-size: 0.9rem;
-		font-weight: bold;
-		display: flex;
-		align-items: center;
-		gap: 0.4rem;
 	}
+	}
+
+
+
+
 </style>
