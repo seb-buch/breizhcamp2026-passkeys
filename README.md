@@ -1,42 +1,16 @@
-# sv
+# Ma présentation
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Bienvenue sur ce repo qui contient le code des diapositives de ma présentation intitulée _Passkeys : Adieu les mots de passe, bonjour la sécurité sans friction !_
+et présentée à [BreizhCamp 2026](https://www.breizhcamp.org/).
 
-## Creating a project
+> [!NOTE]
+> La présentation est formatée pour être visualisée au format 16:9.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Je veux voir la présentation
 
-```sh
-# create a new project
-npx sv create my-app
-```
+La présentation est disponible en
+ligne [ici](https://seb-buch.github.io/breizhcamp2026-passkeys).
 
-To recreate this project with the same configuration:
+## Je veux voir le code de l'application présentée en démo
 
-```sh
-# recreate this project
-bun x sv@0.15.3 create --template minimal --types ts --add prettier eslint --install bun ./
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Le code source est disponible [ici](https://github.com/seb-buch/passkey-demo).
