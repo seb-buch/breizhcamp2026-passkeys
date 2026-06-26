@@ -2,6 +2,7 @@
 	import { Slide, SpeakerNotes } from '@seb-buch/slyd';
 
 	import background from '$lib/assets/images/background-title.png';
+	import logo from '$lib/assets/images/breizhcamp-logo-2026.svg';
 </script>
 
 <Slide backgroundImage={background} backgroundSize="cover">
@@ -11,7 +12,10 @@
 			Adieu les mots de passe, bonjour la sécurité sans friction !
 		</h1>
 		<p class="speaker">Sébastien Buchoux</p>
-		<p class="event">BreizhCamp 2026</p>
+		<p class="event">
+			<img src={logo} alt="BreizhCamp 2026" />
+			2026
+		</p>
 	</div>
 	<SpeakerNotes>
 		<p>
@@ -55,10 +59,16 @@
 
 		.event {
 			font-size: 0.8em;
-			color: #ea7e14;
+			font-weight: 600;
+			line-height: 2em;
 			margin: 5em 0 0;
-			letter-spacing: 0.08em;
-			text-align: right;
+
+			img {
+				height: 2em;
+				position: relative;
+				top: 15px;
+				margin-right: 0.1em;
+			}
 		}
 	}
 </style>
