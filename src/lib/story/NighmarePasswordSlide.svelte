@@ -5,7 +5,7 @@
 
 <Slide {backgroundImage} backgroundSize="cover">
 	<div class="victory-container fragment">
-		<h3>Authentification par mots de passe</h3>
+		<h3>Authentification par mot de passe</h3>
 		<VerticalSpacer height="5em" />
 		<p>Les faiblesses&nbsp;:</p>
 		<ul>

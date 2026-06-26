@@ -17,7 +17,7 @@
 		{
 			label: 'Repo démo (KrabsVault)',
 			icon: 'fa-brands fa-github',
-			url: "https://github.com/seb-buch/passkey-demo"
+			url: 'https://github.com/seb-buch/passkey-demo'
 		},
 		{
 			label: 'Repo présentation',
@@ -38,14 +38,14 @@
 		<p class="subtitle">BreizhCamp 2026 — Sébastien Buchoux</p>
 	</div>
 
-		<div class="grid">
-			{#each links as link (link.label)}
-				<a class="card" href={link.url} target="_blank" rel="external">
-					<i class="fa {link.icon} icon"></i>
-					<span>{link.label}</span>
-				</a>
-			{/each}
-		</div>
+	<div class="grid">
+		{#each links as link (link.label)}
+			<a class="card" href={link.url} target="_blank" rel="external">
+				<i class="fa {link.icon} icon"></i>
+				<span>{link.label}</span>
+			</a>
+		{/each}
+	</div>
 </div>
 
 <style>
@@ -65,60 +65,53 @@
 		align-items: center;
 		justify-content: center;
 		gap: 1rem;
-
 	}
 
 	.header {
-    background: #f1f5f8cc;
-    backdrop-filter: blur(12px);
+		background: #f1f5f8cc;
+		backdrop-filter: blur(12px);
 		border-radius: 16px;
 		padding: 1rem;
 		text-align: center;
 		max-width: 90vw;
-	h1 {
-		margin: 0 0 0.25em;
-    font-size: 5rem;
-		color: #1b5e20;
-	}
+		h1 {
+			margin: 0 0 0.25em;
+			font-size: 5rem;
+			color: #1b5e20;
+		}
 
-	.subtitle {
-		color: #244b24;
-    font-size: 1.5rem;
-		opacity: 0.8;
+		.subtitle {
+			color: #244b24;
+			font-size: 1.5rem;
+			opacity: 0.8;
+		}
 	}
-	}
-
 
 	.grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 5vw;
 
-	.card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap:3vh 3vw;
-		background: white;
-		border-radius: 12px;
-		padding: 3vh 3vw;
-		text-decoration: none;
-		color: #244b24;
-		border: 4px solid transparent;
-		transition: border-color 0.2s ease;
-		text-align: center;
+		.card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 3vh 3vw;
+			background: white;
+			border-radius: 12px;
+			padding: 3vh 3vw;
+			text-decoration: none;
+			color: #244b24;
+			border: 4px solid transparent;
+			transition: border-color 0.2s ease;
+			text-align: center;
 
-		.icon {
-			font-size: calc(max(10vw, 5rem));
+			.icon {
+				font-size: calc(max(10vw, 5rem));
+			}
+			&:hover {
+				border-color: #2e7d32;
+			}
 		}
-	&:hover {
-		border-color: #2e7d32;
 	}
-
-	}
-	}
-
-
-
-
 </style>
